@@ -1,0 +1,32 @@
+class Main {
+    public static void main(String[] args) {
+        String name = "Anamika and Suman are never going to quarrel anymore";
+        String[] arrayName = name.split(" ");
+        String[] nonVowelArray = new String[arrayName.length-1];
+        String vowels = "AEIOUaeiou";
+        int j=0;
+        for(int i=0; i<arrayName.length;i++)
+        {
+            String vowelCheck = arrayName[i].trim();
+            char sChar = vowelCheck.charAt(0);
+            char lChar = vowelCheck.charAt(vowelCheck.length()-1);
+            if(vowels.indexOf(sChar)!=-1 && vowels.indexOf(lChar)!=-1)
+            {
+                System.out.print(vowelCheck+" ");
+            }
+            else
+            {
+                nonVowelArray[j]=vowelCheck;
+                j++;
+            }
+            
+        }
+        for(int i=0; i<nonVowelArray.length;i++)
+        {
+            if(nonVowelArray[i]!=null)
+            {
+            System.out.print(nonVowelArray[i]+" ");
+            }
+        }
+    }
+}
