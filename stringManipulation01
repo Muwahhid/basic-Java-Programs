@@ -1,0 +1,9 @@
+class Main {
+    public static void main(String[] args) {
+        String s = "my is x";
+        String a = "name";
+        int index = s.indexOf("is");
+        String result = s.substring(0, index)+a+" "+s.substring(index);
+        System.out.println(result);
+}
+}
