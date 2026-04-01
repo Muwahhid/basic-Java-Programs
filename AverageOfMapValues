@@ -1,0 +1,33 @@
+// Write a program to write average of Map values - Total of values divided by number of values.
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        Map<String,Integer> map = new HashMap<>();
+        map.put("A",10);
+        map.put("B",19);
+        map.put("C",23);
+        double average = averageOfMap(map);
+        System.out.println("The average of the Map is : "+average);
+        
+    }
+    
+    public static double averageOfMap(Map<String,Integer> map)
+    {
+        if(map==null || map.isEmpty())
+        {
+            return 0.0;
+            
+        }
+        int sum=0;
+        for(int value : map.values())
+        {
+            sum = sum+value;
+            
+        }
+        return (double) sum/map.size();
+        
+    }
+}
