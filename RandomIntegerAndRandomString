@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.util.Random;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+        System.out.println("Enter the number till where random number should be generated: ");
+        int range = sc.nextInt();
+        int randInt = rand.nextInt(range);
+        System.out.println("Random integer: "+randInt);
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        StringBuilder randString = new StringBuilder();
+        for(int i=0; i<10; i++)
+        {
+            int index = rand.nextInt(characters.length());
+            randString.append(characters.charAt(index));
+        }
+        System.out.println("Random String of 10 characters: "+randString);
+}
+}
