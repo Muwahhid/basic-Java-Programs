@@ -1,0 +1,24 @@
+class Main {
+    public static void main(String[] args) {
+        String input = "My name is Praveen.";
+        String[] subStr = input.split(" ");
+        StringBuilder finalSentence = new StringBuilder();
+        for(int i=0; i<subStr.length; i++)
+        {
+            String word = subStr[i];
+            if(word.length()>=2)
+            {
+               finalSentence.append(word.substring(0,1))
+               .append(Character.toUpperCase(word.charAt(1)))
+               .append(word.substring(2))
+               .append(" ");
+            }
+            else
+            {
+                finalSentence.append(word).append(" ");
+            }
+        }
+        System.out.println("Input string: "+input);
+        System.out.println("output String: "+finalSentence);
+    }
+}
